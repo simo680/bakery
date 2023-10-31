@@ -1,0 +1,52 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+$border-color-white: white;
+$border-color-black: black;
+
+body {
+   font: 100% $font-stack;
+   margin: 0;
+}
+
+h2 {
+   font-size: 55px;
+   font-weight: 300;
+   font-family: Montserrat, sans-serif;
+}
+
+.organic-bread {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+   background-image: url(./img/Bakertheme.jpg);
+   background-repeat: no-repeat;
+   background-position: 50% 50%;
+   background-size: cover;
+   color: white;
+   font-size: 18px;
+   height: 900px;
+  
+   .logo{
+      width: 140px; 
+      background: none;
+   }
+
+   .container-main {
+      margin-left: 500px;
+      position: relative;
+      padding: 30px 30px;
+      width: 500px;   
+   }
+}
+
+.menu-but {
+   color: white;
+   padding: 20px 20px;
+   font-weight: 700;
+   font-size: 16px;
+   border-radius: 30px;
+   background-color: transparent;
+   border-color: white;
+}
+
