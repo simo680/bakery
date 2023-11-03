@@ -6,7 +6,11 @@ body {
 h2 {
   font-size: 55px;
   font-weight: 300;
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+
+h5 {
+  font-family: "Montserrat", sans-serif;
 }
 
 .organic-bread {
@@ -22,15 +26,21 @@ h2 {
   font-size: 18px;
   height: 900px;
 }
-.organic-bread .logo {
+.organic-bread img {
   width: 140px;
   background: none;
 }
-.organic-bread .container-main {
+.organic-bread div {
   margin-left: 500px;
   position: relative;
   padding: 30px 30px;
   width: 500px;
+}
+.organic-bread p {
+  line-height: 2;
+  font-size: 1.125rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+  margin: 20px 0 0;
 }
 
 .menu-but {
@@ -41,4 +51,34 @@ h2 {
   border-radius: 30px;
   background-color: transparent;
   border-color: white;
+}
+
+.delicious-baking h2 {
+  font-size: 55px;
+  display: flex;
+  justify-content: center;
+}
+.delicious-baking .list {
+  display: grid;
+  grid-template-columns: repeat(3, 35%);
+  position: relative;
+  padding: 100px;
+}
+.delicious-baking img {
+  width: 65px;
+  height: 65px;
+  margin-right: 30px;
+  margin-top: 20px;
+}
+.delicious-baking p {
+  width: 250px;
+}
+.delicious-baking .list-item {
+  display: flex;
+}
+.delicious-baking h5 {
+  font-size: 1.25rem;
+}
+.delicious-baking p {
+  font-size: 16px;
 }/*# sourceMappingURL=style.css.map */
