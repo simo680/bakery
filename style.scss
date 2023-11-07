@@ -1,19 +1,23 @@
 $font-stack: Helvetica, sans-serif;
 $font-title: 'Montserrat', sans-serif;
-$primary-color: #333;
-$border-color-white: white;
-$border-color-black: black;
+$bgWhite: white;
+
 
 
 body {
    font: 100% $font-stack;
+   background-color: #f2f2f2;
    margin: 0;
 }
 
 h2 {
    font-size: 55px;
-   font-weight: 300;
+   font-weight: 400;
    font-family: $font-title;
+}
+
+h3 {
+   font-family: $font-stack;
 }
 
 h5 {
@@ -25,11 +29,11 @@ h5 {
    flex-direction: column;
    justify-content: center;
    text-align: center;
-   background-image: url(./img/Bakertheme.jpg);
+   background-image: linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(./img/Bakertheme.jpg);
    background-repeat: no-repeat;
    background-position: 50% 50%;
    background-size: cover;
-   color: white;
+   color: $bgWhite;
    font-size: 18px;
    height: 900px;
   
@@ -54,30 +58,43 @@ h5 {
 }
 
 .menu-but {
-   color: white;
-   padding: 20px 20px;
+   color: $bgWhite;
+   border: 2px solid $bgWhite;
+   background-color: transparent;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   margin: 30px auto 0;
+   padding: 20px 50px;
    font-weight: 700;
    font-size: 16px;
    border-radius: 30px;
-   background-color: transparent;
-   border-color: white;
 }
 
 
 .delicious-baking {
-   
+   .list {
+      display: grid;
+      grid-template-columns: repeat(3, 35%);
+      position: relative;
+      padding: 100px;
+   }
+
    h2 {
-      font-size: 55px;
       display: flex;
       justify-content: center;
    }
 
-   .list {
-     display: grid;
-     grid-template-columns: repeat(3, 35%);
-     position: relative;
-     padding: 100px;
+   h5 {
+      font-size: 1.25rem;
+      font-weight: 400;
    }
+
+   p {
+      width: 250px;
+      font-size: 16px;
+      line-height: 1.6;
+   }
+   
    img {
       width: 65px;
       height: 65px;
@@ -85,24 +102,90 @@ h5 {
       margin-top: 20px;
    }
    
-   p {
-      width: 250px;
-   }
-
    .list-item {
       display: flex;
    }
 
-   h5 {
-      font-size:  1.25rem;;
-   }
-
-   p {
-      font-size: 16px;
-   }
+  
 }
 
 
-.card-readmore {
+.our-mission {
+   img { 
+    
+      height: 800px; 
+      width: 100%;
+      object-fit: cover;
+      object-position: 50% 0%;
+   }
+
+   div {
+      position: relative;
+      width: 551px;
+      margin: -285px calc(((100% - 1140px) / 2)) 37px auto;
+      background-color: $bgWhite;
+      box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.2);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+      h3 {
+         font-size: 2.5rem;
+      }
+
+      P {
+         margin-top: 20px 0 0;
+         line-height: 2;
+      }
+
+      button {
+         background-color: transparent;
+         text-transform: uppercase;
+         letter-spacing: 1px;
+         margin: 30px auto 0 0;
+         padding: 20px 50px;
+         font-weight: 700;
+         font-size: 16px;
+         border-radius: 30px;
+      }
+   }
+}
+
+.about-bakery {
    
+   .table{
+      background-color: $bgWhite;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 30px 50px;
+      width: 500px;
+      height: auto;
+   }
+
+   h2 {
+      margin: 0 auto 0 0;  
+   }
+
+   p {
+      line-height: 2.2;
+      margin: 20px auto 0 0;
+   }
+   
+   .div1 {
+      display: grid;
+      grid-template-columns: repeat(2, calc(50% - 5px));
+      gap: 10px;
+      min-height: 281px
+   }
+
+   .title {
+      padding: 10px 10px 10px 0;
+      
+   }
+   a {
+    cursor: pointer;
+    text-decoration: underline;
+   }
 }
