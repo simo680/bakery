@@ -1,7 +1,4 @@
-$font-stack: Helvetica, sans-serif;
-$font-title: 'Montserrat', sans-serif;
-$bgWhite: white;
-
+@import "variables";
 
 
 body {
@@ -29,7 +26,7 @@ h5 {
    flex-direction: column;
    justify-content: center;
    text-align: center;
-   background-image: linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(./img/Bakertheme.jpg);
+   background-image: linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(../img/Bakertheme.jpg);
    background-repeat: no-repeat;
    background-position: 50% 50%;
    background-size: cover;
@@ -153,15 +150,17 @@ h5 {
 }
 
 .about-bakery {
+   display: flex;
+   justify-content: center;
+   align-items: center;
    
+
    .table{
       background-color: $bgWhite;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
       padding: 30px 50px;
       width: 500px;
       height: auto;
+      
    }
 
    h2 {
@@ -182,10 +181,19 @@ h5 {
 
    .title {
       padding: 10px 10px 10px 0;
-      
    }
-   a {
-    cursor: pointer;
-    text-decoration: underline;
+
+   .div2 {
+     background-image: url("../img/Happy\ man.jpg");
+     width: 500px;
+     height: 505px;
+     padding: 30px;
+     background-size: cover;
+     background-position: center;
+
    }
+
+  
+
+   
 }
