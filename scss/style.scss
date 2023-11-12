@@ -3,9 +3,10 @@
 
 body {
    font: 100% $font-stack;
-   background-color: #f2f2f2;
    margin: 0;
+   background-color: #e5e5e5;
 }
+
 
 h2 {
    font-size: 55px;
@@ -107,19 +108,19 @@ h5 {
 }
 
 
-.our-mission {
+.our-mission {   
    img { 
-    
       height: 800px; 
       width: 100%;
       object-fit: cover;
       object-position: 50% 0%;
    }
 
+  
    div {
       position: relative;
+      margin: -285px calc(((100% - 1140px) / 2)) 125px auto;
       width: 551px;
-      margin: -285px calc(((100% - 1140px) / 2)) 37px auto;
       background-color: $bgWhite;
       box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.2);
       padding: 30px;
@@ -153,14 +154,15 @@ h5 {
    display: flex;
    justify-content: center;
    align-items: center;
-   
+   background-color: #e5e5e5;
 
    .table{
       background-color: $bgWhite;
       padding: 30px 50px;
       width: 500px;
       height: auto;
-      
+      padding-left: 30px;
+      padding-right: 30px;
    }
 
    h2 {
@@ -176,7 +178,10 @@ h5 {
       display: grid;
       grid-template-columns: repeat(2, calc(50% - 5px));
       gap: 10px;
-      min-height: 281px
+      min-height: 281px;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
    }
 
    .title {
@@ -193,7 +198,76 @@ h5 {
 
    }
 
-  
+   a {
+      text-decoration: none;
+      color: black;
+      font-weight: 400;
+      background-image: none;
+      font-size: 1.25em;
+      font-family: inherit;
+   }
 
    
+}
+
+
+.bakery-items {
+   display: flex;
+   flex-direction: column;
+
+   h2 {
+      margin: 60px auto 0;
+      font-weight: 400;
+      line-height: 1.1;
+      text-align: center;
+   }
+
+   h5 {
+      font-size: 1.25rem;
+      line-height: 1.2;
+      font-weight: 700;
+      margin: 20px 0 0;
+   }
+   .text {
+      text-align: center;
+      font-size: 1.125rem;
+      font-style: italic;
+      width: 745px;
+      text-align: center;
+      margin: 30px auto 0;
+   }
+   
+   img {
+      height: 231px;
+   }
+
+   .table-list {
+      display: grid;
+      grid-template-columns: repeat(3, 35%);
+   }
+
+   p {
+      text-align: left;
+      margin: 20px 0 0;
+      
+   }
+
+   .card {
+      padding: 50px 30px 30px;
+      width: 240px;
+   }
+   
+  
+}
+
+.contact-us {
+   background-image: url(../img/Contact\ Us.jpg);
+   background-size: cover;
+   background-position: 50% 50%;
+
+
+   .form {
+      display: flex;
+      flex-direction: column;
+   }
 }

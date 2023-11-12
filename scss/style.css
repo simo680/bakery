@@ -1,7 +1,7 @@
 body {
   font: 100% Helvetica, sans-serif;
-  background-color: #f2f2f2;
   margin: 0;
+  background-color: #e5e5e5;
 }
 
 h2 {
@@ -100,8 +100,8 @@ h5 {
 }
 .our-mission div {
   position: relative;
+  margin: -285px calc((100% - 1140px) / 2) 125px auto;
   width: 551px;
-  margin: -285px calc((100% - 1140px) / 2) 37px auto;
   background-color: white;
   box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.2);
   padding: 30px;
@@ -131,12 +131,15 @@ h5 {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #e5e5e5;
 }
 .about-bakery .table {
   background-color: white;
   padding: 30px 50px;
   width: 500px;
   height: auto;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .about-bakery h2 {
   margin: 0 auto 0 0;
@@ -150,6 +153,9 @@ h5 {
   grid-template-columns: repeat(2, calc(50% - 5px));
   gap: 10px;
   min-height: 281px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 .about-bakery .title {
   padding: 10px 10px 10px 0;
@@ -161,4 +167,62 @@ h5 {
   padding: 30px;
   background-size: cover;
   background-position: center;
+}
+.about-bakery a {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+  background-image: none;
+  font-size: 1.25em;
+  font-family: inherit;
+}
+
+.bakery-items {
+  display: flex;
+  flex-direction: column;
+}
+.bakery-items h2 {
+  margin: 60px auto 0;
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+}
+.bakery-items h5 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 20px 0 0;
+}
+.bakery-items .text {
+  text-align: center;
+  font-size: 1.125rem;
+  font-style: italic;
+  width: 745px;
+  text-align: center;
+  margin: 30px auto 0;
+}
+.bakery-items img {
+  height: 231px;
+}
+.bakery-items .table-list {
+  display: grid;
+  grid-template-columns: repeat(3, 35%);
+}
+.bakery-items p {
+  text-align: left;
+  margin: 20px 0 0;
+}
+.bakery-items .card {
+  padding: 50px 30px 30px;
+  width: 240px;
+}
+
+.contact-us {
+  background-image: url(../img/Contact\ Us.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.contact-us .form {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */
