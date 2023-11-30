@@ -49,7 +49,7 @@ h5 {
   }
 
   div {
-    margin-left: 500px;
+    margin-left: calc(50% - 500px);
     position: relative;
     padding: 30px 30px;
     width: 500px;
@@ -113,7 +113,6 @@ h5 {
 }
 
 .our-mission {
- 
   img {
     height: 800px;
     width: 100%;
@@ -218,23 +217,13 @@ h5 {
   background-color: white;
 
   h2 {
-    margin: 60px auto 0;
-    font-weight: 400;
     line-height: 1.1;
-    text-align: center;
   }
 
-  h5 {
-    font-size: 1.25rem;
-    line-height: 1.2;
-    font-weight: 700;
-    margin: 20px 0 0;
-  }
   .text {
-    text-align: center;
     font-size: 1.125rem;
     font-style: italic;
-    width: 745px;
+    width: 345px;
     text-align: center;
     margin: 30px auto 0;
   }
@@ -263,13 +252,12 @@ h5 {
   background-image: url(../img/Contact\ Us.jpg);
   background-size: cover;
   background-position: 50% 50%;
-   
-   
+
   .form {
-      display: flex;
-      flex-direction: column;
-      width: 500px;
-      margin-left: 900px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin-left: 900px;
     padding: 30px 0;
     padding-left: 32px;
     a {
@@ -286,7 +274,7 @@ h5 {
     }
     .email,
     .name {
-       margin-bottom: 32px;
+      margin-bottom: 32px;
 
       input {
         border-radius: 50px;
@@ -306,6 +294,218 @@ h5 {
     grid-template-columns: repeat(3, calc(33.3333% - 13.3333px));
     gap: 20px;
 
+    a {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      margin: 22px 0 0;
+    }
+  }
+
+  .call-us {
+    padding: 10px 26px 10px 0;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 768px) {
+  h2 {
+    font-size: 30px;
+  }
+
+  h5 {
+    font-size: 1.300rem;
+  }
+
+  .organic-bread {
+    background-position: 70%;
+    font-size: 15px;
+    img {
+      width: 140px;
+      background: none;
+    }
+
+    div {
+      margin-left: 0;
+      padding: 30px 30px;
+      width: 340px;
+    }
+
+    p {
+      line-height: 2;
+      font-size: 1.125rem;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+      margin: 20px 0 0;
+    }
+  }
+
+  .menu-but {
+    color: $bgWhite;
+    border: 2px solid $bgWhite;
+    background-color: transparent;
+    letter-spacing: 1px;
+    margin: 30px auto 0;
+    padding: 20px 50px;
+    font-size: 16px;
+  }
+
+  .delicious-baking {
+    .list {
+      grid-template-columns: repeat(1, 35%);
+      padding: 20px;
+    }
+
+    h2 {
+      display: flex;
+      justify-content: center;
+    }
+
+    h5 {
+      font-size: 1.25rem;
+      font-weight: 400;
+    }
+
+    p {
+      width: 250px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    img {
+      width: 65px;
+      height: 65px;
+      margin-right: 30px;
+      margin-top: 20px;
+    }
+  }
+
+  .our-mission {
+    img {
+      height: 800px;
+      width: 100%;
+      object-position: 50% 0%;
+    }
+
+    div {
+      margin: 20px;
+      width: 300px;
+      padding: 30px;
+
+      h3 {
+        font-size: 2.5rem;
+      }
+
+      P {
+        margin-top: 20px 0 0;
+        line-height: 2;
+      }
+
+      button {
+        letter-spacing: 1px;
+        margin: 30px auto 0 0;
+        padding: 20px 50px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .about-bakery {
+    margin-bottom: 30px;
+
+    .table {
+      padding: 30px 50px;
+      width: 500px;
+      height: auto;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    h2 {
+      margin: 0 auto 0 0;
+    }
+
+    p {
+      line-height: 2.2;
+      margin: 20px auto 0 0;
+    }
+
+    .div1 {
+      grid-template-columns: repeat(1, calc(50% - 5px));
+      gap: 10px;
+      min-height: 281px;
+    }
+
+    .title {
+      padding: 10px 10px 10px 0;
+    }
+
+    .div2 {
+      background-image: url("../img/Happy\ man.jpg");
+      width: 500px;
+      height: 505px;
+    }
+
+    a {
+      font-size: 1.25em;
+    }
+  }
+
+  .bakery-items {
+    background-color: white;
+
+    h2 {
+      margin: 60px auto 0;
+      font-weight: 400;
+      line-height: 1.1;
+    }
+
+    h5 {
+      font-size: 1.25rem;
+      line-height: 1.2;
+      font-weight: 700;
+      margin: 20px 0 0;
+    }
+    .text {
+      font-size: 1.125rem;
+      margin: 30px auto 0;
+    }
+
+    img {
+      height: 231px;
+    }
+
+    .table-list {
+      grid-template-columns: repeat(1, 35%);
+    }
+
+    p {
+      text-align: left;
+      margin: 20px 0 0;
+    }
+
+    .card {
+      padding: 50px 30px 30px;
+      width: 240px;
+    }
+  }
+
+  .contact-us {
+
+    .form {
+      width: 300px;
+      margin-left: 0px;
+      padding: 0;
+      a {
+        font-size: 1rem;
+        letter-spacing: 2px;
+        padding: 15px;
+      }
+      .email,
+      .name {
+        margin-bottom: 32px;
+        input {
+          padding: 10px 12px;
+        }
+      }
+    }
     a {
       font-size: 1.125rem;
       line-height: 1.6;

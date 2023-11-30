@@ -41,7 +41,7 @@ h5 {
   background: none;
 }
 .organic-bread div {
-  margin-left: 500px;
+  margin-left: calc(50% - 500px);
   position: relative;
   padding: 30px 30px;
   width: 500px;
@@ -189,22 +189,12 @@ h5 {
   background-color: white;
 }
 .bakery-items h2 {
-  margin: 60px auto 0;
-  font-weight: 400;
   line-height: 1.1;
-  text-align: center;
-}
-.bakery-items h5 {
-  font-size: 1.25rem;
-  line-height: 1.2;
-  font-weight: 700;
-  margin: 20px 0 0;
 }
 .bakery-items .text {
-  text-align: center;
   font-size: 1.125rem;
   font-style: italic;
-  width: 745px;
+  width: 345px;
   text-align: center;
   margin: 30px auto 0;
 }
@@ -276,4 +266,179 @@ h5 {
 }
 .contact-us .call-us {
   padding: 10px 26px 10px 0;
+}
+
+@media (min-width: 360px) and (max-width: 768px) {
+  h2 {
+    font-size: 30px;
+  }
+  h5 {
+    font-size: 1.3rem;
+  }
+  .organic-bread {
+    background-position: 70%;
+    font-size: 15px;
+  }
+  .organic-bread img {
+    width: 140px;
+    background: none;
+  }
+  .organic-bread div {
+    margin-left: 0;
+    padding: 30px 30px;
+    width: 340px;
+  }
+  .organic-bread p {
+    line-height: 2;
+    font-size: 1.125rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+    margin: 20px 0 0;
+  }
+  .menu-but {
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+    letter-spacing: 1px;
+    margin: 30px auto 0;
+    padding: 20px 50px;
+    font-size: 16px;
+  }
+  .delicious-baking .list {
+    grid-template-columns: repeat(1, 35%);
+    padding: 20px;
+  }
+  .delicious-baking h2 {
+    display: flex;
+    justify-content: center;
+  }
+  .delicious-baking h5 {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+  .delicious-baking p {
+    width: 250px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .delicious-baking img {
+    width: 65px;
+    height: 65px;
+    margin-right: 30px;
+    margin-top: 20px;
+  }
+  .our-mission img {
+    height: 800px;
+    width: 100%;
+    -o-object-position: 50% 0%;
+       object-position: 50% 0%;
+  }
+  .our-mission div {
+    margin: 20px;
+    width: 300px;
+    padding: 30px;
+  }
+  .our-mission div h3 {
+    font-size: 2.5rem;
+  }
+  .our-mission div P {
+    margin-top: 20px 0 0;
+    line-height: 2;
+  }
+  .our-mission div button {
+    letter-spacing: 1px;
+    margin: 30px auto 0 0;
+    padding: 20px 50px;
+    font-size: 16px;
+  }
+  .about-bakery {
+    margin-bottom: 30px;
+  }
+  .about-bakery .table {
+    padding: 30px 50px;
+    width: 500px;
+    height: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .about-bakery h2 {
+    margin: 0 auto 0 0;
+  }
+  .about-bakery p {
+    line-height: 2.2;
+    margin: 20px auto 0 0;
+  }
+  .about-bakery .div1 {
+    grid-template-columns: repeat(1, calc(50% - 5px));
+    gap: 10px;
+    min-height: 281px;
+  }
+  .about-bakery .title {
+    padding: 10px 10px 10px 0;
+  }
+  .about-bakery .div2 {
+    background-image: url("../img/Happy man.jpg");
+    width: 500px;
+    height: 505px;
+  }
+  .about-bakery a {
+    font-size: 1.25em;
+  }
+  .bakery-items {
+    background-color: white;
+  }
+  .bakery-items h2 {
+    margin: 60px auto 0;
+    font-weight: 400;
+    line-height: 1.1;
+  }
+  .bakery-items h5 {
+    font-size: 1.25rem;
+    line-height: 1.2;
+    font-weight: 700;
+    margin: 20px 0 0;
+  }
+  .bakery-items .text {
+    font-size: 1.125rem;
+    margin: 30px auto 0;
+  }
+  .bakery-items img {
+    height: 231px;
+  }
+  .bakery-items .table-list {
+    grid-template-columns: repeat(1, 35%);
+  }
+  .bakery-items p {
+    text-align: left;
+    margin: 20px 0 0;
+  }
+  .bakery-items .card {
+    padding: 50px 30px 30px;
+    width: 240px;
+  }
+  .contact-us .form {
+    width: 300px;
+    margin-left: 0px;
+    padding: 0;
+  }
+  .contact-us .form a {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    padding: 15px;
+  }
+  .contact-us .form .email,
+  .contact-us .form .name {
+    margin-bottom: 32px;
+  }
+  .contact-us .form .email input,
+  .contact-us .form .name input {
+    padding: 10px 12px;
+  }
+  .contact-us a {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin: 22px 0 0;
+  }
+  .call-us {
+    padding: 10px 26px 10px 0;
+  }
 }/*# sourceMappingURL=style.css.map */
