@@ -215,7 +215,7 @@ h5 {
   display: flex;
   flex-direction: column;
   background-color: white;
-
+  text-align: center;
   h2 {
     line-height: 1.1;
   }
@@ -306,7 +306,9 @@ h5 {
   }
 }
 
-@media (min-width: 360px) and (max-width: 768px) {
+@media (min-width: 360px) and (max-width: 896px) {
+
+
   h2 {
     font-size: 30px;
   }
@@ -325,7 +327,7 @@ h5 {
 
     div {
       margin-left: 0;
-      padding: 30px 30px;
+      padding: 10px;
       width: 340px;
     }
 
@@ -385,9 +387,9 @@ h5 {
     }
 
     div {
-      margin: 20px;
+      margin: 10px;
       width: 300px;
-      padding: 30px;
+      padding: 20px;
 
       h3 {
         font-size: 2.5rem;
@@ -432,17 +434,9 @@ h5 {
       gap: 10px;
       min-height: 281px;
     }
-
     .title {
       padding: 10px 10px 10px 0;
     }
-
-    .div2 {
-      background-image: url("../img/Happy\ man.jpg");
-      width: 500px;
-      height: 505px;
-    }
-
     a {
       font-size: 1.25em;
     }
@@ -484,6 +478,7 @@ h5 {
     .card {
       padding: 50px 30px 30px;
       width: 240px;
+      margin-left: 50px;
     }
   }
 

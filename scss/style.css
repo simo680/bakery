@@ -187,6 +187,7 @@ h5 {
   display: flex;
   flex-direction: column;
   background-color: white;
+  text-align: center;
 }
 .bakery-items h2 {
   line-height: 1.1;
@@ -268,7 +269,7 @@ h5 {
   padding: 10px 26px 10px 0;
 }
 
-@media (min-width: 360px) and (max-width: 768px) {
+@media (min-width: 360px) and (max-width: 896px) {
   h2 {
     font-size: 30px;
   }
@@ -285,7 +286,7 @@ h5 {
   }
   .organic-bread div {
     margin-left: 0;
-    padding: 30px 30px;
+    padding: 10px;
     width: 340px;
   }
   .organic-bread p {
@@ -333,9 +334,9 @@ h5 {
        object-position: 50% 0%;
   }
   .our-mission div {
-    margin: 20px;
+    margin: 10px;
     width: 300px;
-    padding: 30px;
+    padding: 20px;
   }
   .our-mission div h3 {
     font-size: 2.5rem;
@@ -375,11 +376,6 @@ h5 {
   .about-bakery .title {
     padding: 10px 10px 10px 0;
   }
-  .about-bakery .div2 {
-    background-image: url("../img/Happy man.jpg");
-    width: 500px;
-    height: 505px;
-  }
   .about-bakery a {
     font-size: 1.25em;
   }
@@ -414,6 +410,7 @@ h5 {
   .bakery-items .card {
     padding: 50px 30px 30px;
     width: 240px;
+    margin-left: 50px;
   }
   .contact-us .form {
     width: 300px;
