@@ -167,7 +167,7 @@ h5 {
   padding: 10px 10px 10px 0;
 }
 .about-bakery .div2 {
-  background-image: url("../img/Happy man.jpg");
+  background-image: url("../img/Happy_man.jpg");
   width: 500px;
   height: 505px;
   padding: 30px;
@@ -216,7 +216,7 @@ h5 {
 }
 
 .contact-us {
-  background-image: url(../img/Contact\ Us.jpg);
+  background-image: url(../img/Contact_Us.jpg);
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -269,7 +269,7 @@ h5 {
   padding: 10px 26px 10px 0;
 }
 
-@media (min-width: 360px) and (max-width: 896px) {
+@media (min-width: 360px) and (max-width: 576px) {
   h2 {
     font-size: 30px;
   }
@@ -335,31 +335,20 @@ h5 {
   }
   .our-mission div {
     margin: 10px;
-    width: 300px;
-    padding: 20px;
-  }
-  .our-mission div h3 {
-    font-size: 2.5rem;
+    width: auto;
+    padding: 55px;
   }
   .our-mission div P {
     margin-top: 20px 0 0;
     line-height: 2;
   }
-  .our-mission div button {
-    letter-spacing: 1px;
-    margin: 30px auto 0 0;
-    padding: 20px 50px;
-    font-size: 16px;
-  }
   .about-bakery {
     margin-bottom: 30px;
+    flex-direction: column;
   }
   .about-bakery .table {
-    padding: 30px 50px;
-    width: 500px;
+    width: calc(100% - 60px);
     height: auto;
-    padding-left: 30px;
-    padding-right: 30px;
   }
   .about-bakery h2 {
     margin: 0 auto 0 0;
@@ -370,11 +359,9 @@ h5 {
   }
   .about-bakery .div1 {
     grid-template-columns: repeat(1, calc(50% - 5px));
-    gap: 10px;
-    min-height: 281px;
   }
-  .about-bakery .title {
-    padding: 10px 10px 10px 0;
+  .about-bakery .div2 {
+    width: calc(100% - 60px);
   }
   .about-bakery a {
     font-size: 1.25em;
@@ -421,6 +408,7 @@ h5 {
     font-size: 1rem;
     letter-spacing: 2px;
     padding: 15px;
+    margin: 5px;
   }
   .contact-us .form .email,
   .contact-us .form .name {
