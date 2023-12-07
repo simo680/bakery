@@ -64,6 +64,13 @@ h5 {
   font-weight: 700;
   font-size: 16px;
   border-radius: 30px;
+  animation-duration: 3s;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+.menu-but:hover, .menu-but:active {
+  background-color: white;
+  color: #000;
 }
 
 .delicious-baking .list {
@@ -130,6 +137,11 @@ h5 {
   font-weight: 700;
   font-size: 16px;
   border-radius: 30px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.our-mission div button:hover, .our-mission div button:active {
+  background-color: white;
+  color: #000;
 }
 
 .about-bakery {
@@ -269,7 +281,7 @@ h5 {
   padding: 10px 26px 10px 0;
 }
 
-@media (min-width: 360px) and (max-width: 576px) {
+@media (min-width: 280px) and (max-width: 576px) {
   h2 {
     font-size: 30px;
   }
@@ -292,14 +304,9 @@ h5 {
   .organic-bread p {
     line-height: 2;
     font-size: 1.125rem;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
     margin: 20px 0 0;
   }
   .menu-but {
-    color: white;
-    border: 2px solid white;
-    background-color: transparent;
-    letter-spacing: 1px;
     margin: 30px auto 0;
     padding: 20px 50px;
     font-size: 16px;
@@ -317,9 +324,8 @@ h5 {
     font-weight: 400;
   }
   .delicious-baking p {
-    width: 250px;
+    width: 230px;
     font-size: 16px;
-    line-height: 1.6;
   }
   .delicious-baking img {
     width: 65px;
@@ -347,7 +353,7 @@ h5 {
     flex-direction: column;
   }
   .about-bakery .table {
-    width: calc(100% - 60px);
+    width: calc(100% - 70px);
     height: auto;
   }
   .about-bakery h2 {
@@ -371,7 +377,6 @@ h5 {
   }
   .bakery-items h2 {
     margin: 60px auto 0;
-    font-weight: 400;
     line-height: 1.1;
   }
   .bakery-items h5 {
@@ -425,5 +430,32 @@ h5 {
   }
   .call-us {
     padding: 10px 26px 10px 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 1024px) {
+  .organic-bread {
+    align-items: center;
+  }
+  .our-mission div {
+    margin-right: 40px;
+  }
+  .delicious-baking .list {
+    grid-template-columns: repeat(2, 50%);
+    padding: 0px;
+    font-size: 10px;
+  }
+  .bakery-items .table-list {
+    grid-template-columns: repeat(2, 60%);
+  }
+  .contact-us .form {
+    margin-left: 250px;
+  }
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
   }
 }/*# sourceMappingURL=style.css.map */
