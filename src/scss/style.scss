@@ -1,4 +1,4 @@
-@import "variables";
+@use "variables" as *;
 
 body {
   font: 100% $font-stack;
@@ -32,10 +32,10 @@ h5 {
   text-align: center;
   background-image: linear-gradient(
       0deg,
-      rgba(0, 0, 0, 0.45),
-      rgba(0, 0, 0, 0.45)
+      rgb(0 0 0 / 45%),
+      rgb(0 0 0 / 45%)
     ),
-    url(../img/Bakertheme.jpg);
+    url("../images/Bakertheme.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -51,14 +51,14 @@ h5 {
   div {
     margin-left: calc(50% - 500px);
     position: relative;
-    padding: 30px 30px;
+    padding: 30px;
     width: 500px;
   }
 
   p {
     line-height: 2;
     font-size: 1.125rem;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+    text-shadow: 2px 2px 8px rgb(0 0 0 / 25%);
     margin: 20px 0 0;
   }
 }
@@ -75,7 +75,9 @@ h5 {
   font-size: 16px;
   border-radius: 30px;
   animation-duration: 3s;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 
   &:hover {
     background-color: $bgWhite;
@@ -132,7 +134,7 @@ h5 {
     margin: -285px calc(((100% - 1140px) / 2)) 125px auto;
     width: 551px;
     background-color: $bgWhite;
-    box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 20px 0 rgb(0 0 0 / 20%);
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -142,7 +144,7 @@ h5 {
       font-size: 2.5rem;
     }
 
-    P {
+    p {
       margin-top: 20px 0 0;
       line-height: 2;
     }
@@ -156,7 +158,10 @@ h5 {
       font-weight: 700;
       font-size: 16px;
       border-radius: 30px;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+
       &:hover,
       &:active {
         background-color: black;
@@ -206,7 +211,7 @@ h5 {
   }
 
   .div2 {
-    background-image: url("../img/Happy_man.jpg");
+    background-image: url('../images/Happy_man.jpg');
     width: 500px;
     height: 505px;
     padding: 30px;
@@ -229,6 +234,7 @@ h5 {
   flex-direction: column;
   background-color: white;
   text-align: center;
+
   h2 {
     line-height: 1.1;
   }
@@ -262,7 +268,7 @@ h5 {
 }
 
 .contact-us {
-  background-image: url(../img/Contact_Us.jpg);
+  background-image: url("../images/Contact_Us.jpg");
   background-size: cover;
   background-position: 50% 50%;
 
@@ -273,6 +279,7 @@ h5 {
     margin-left: 900px;
     padding: 30px 0;
     padding-left: 32px;
+
     a {
       background-color: black;
       color: white;
@@ -284,13 +291,17 @@ h5 {
       text-align: center;
       text-decoration: none;
       padding: 15px;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+
       &:hover,
       &:active {
         background-color: $bgWhite;
         color: black;
       }
     }
+
     .email,
     .name {
       margin-bottom: 32px;
@@ -317,7 +328,6 @@ h5 {
       font-size: 1.125rem;
       line-height: 1.6;
       margin: 22px 0 0;
-    
     }
   }
 
@@ -326,7 +336,7 @@ h5 {
   }
 }
 
-@media (min-width: 280px) and (max-width: 576px) {
+@media (width >= 280px) and (width <= 576px) {
   h2 {
     font-size: 30px;
   }
@@ -338,6 +348,7 @@ h5 {
   .organic-bread {
     background-position: 70%;
     font-size: 15px;
+
     img {
       width: 140px;
       background: none;
@@ -403,15 +414,17 @@ h5 {
       width: auto;
       padding: 55px;
 
-      P {
+      p {
         margin-top: 20px 0 0;
         line-height: 2;
       }
     }
   }
+
   .about-bakery {
     margin-bottom: 30px;
     flex-direction: column;
+
     .table {
       width: calc(100% - 70px);
       height: auto;
@@ -429,9 +442,11 @@ h5 {
     .div1 {
       grid-template-columns: repeat(1, calc(50% - 5px));
     }
+
     .div2 {
       width: calc(100% - 60px);
     }
+
     a {
       font-size: 1.25em;
     }
@@ -451,6 +466,7 @@ h5 {
       font-weight: 700;
       margin: 20px 0 0;
     }
+
     .text {
       font-size: 1.125rem;
       margin: 30px auto 0;
@@ -463,6 +479,7 @@ h5 {
     .table-list {
       grid-template-columns: repeat(1, 35%);
     }
+
     p {
       text-align: left;
       margin: 20px 0 0;
@@ -478,7 +495,7 @@ h5 {
   .contact-us {
     .form {
       width: 300px;
-      margin-left: 0px;
+      margin-left: 0;
       padding: 0;
 
       a {
@@ -491,6 +508,7 @@ h5 {
       .email,
       .name {
         margin-bottom: 32px;
+
         input {
           padding: 10px 12px;
         }
@@ -509,7 +527,7 @@ h5 {
   }
 }
 
-@media (min-width: 481px) and (max-width: 1024px) {
+@media (width >= 481px) and (width <= 1024px) {
   .organic-bread {
     align-items: center;
   }
@@ -519,10 +537,11 @@ h5 {
       margin-right: 40px;
     }
   }
+
   .delicious-baking {
     .list {
       grid-template-columns: repeat(2, 50%);
-      padding: 0px;
+      padding: 0;
       font-size: 10px;
     }
   }
@@ -532,6 +551,7 @@ h5 {
       grid-template-columns: repeat(2, 60%);
     }
   }
+
   .contact-us {
     .form {
       margin-left: 250px;

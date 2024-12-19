@@ -1,0 +1,42 @@
+{
+  "name": "bakery",
+  "version": "1.0.0",
+  "description": "Website Layout: [link](https://nicepage.com/landing-page/preview/bagels-buns-rolls-biscuits-and-loaf-breads-4309158?device=desktop)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'Привет!'",
+    "check": "prettier --check './src/**/*.{html,css,scss,js}'",
+    "format": "prettier --write './src/**/*.{html,css,scss,js}'",
+    "lint": "stylelint './src/**/*.{css,scss}'",
+    "lintfix": "stylelint './src/**/*.{css,scss}' --fix",
+    "checkAll": "npm run check && npm run lint",
+    "fixAll": "npm run format && npm run lintfix",
+    "start": "gulp watchapp",
+    "build": "gulp build",
+    "deploy": "gulp deploy",
+    "dev": "gulp",
+    "fixAndBuild": "npm run fixAll && npm run build",
+    "lintfixAndPush": "npm run fixAll && git add . && git commit -m 'prepared for publication' && git push"
+  },
+  "author": "simozoid",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "browser-sync": "^3.0.3",
+    "cssnano": "^7.0.6",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^10.0.0",
+    "gulp-sass": "^6.0.0",
+    "html-minifier": "^4.0.0",
+    "postcss": "^8.4.49",
+    "postcss-combine-media-query": "^1.0.1",
+    "prettier": "^3.4.2",
+    "sass": "^1.83.0",
+    "stylelint-config-standard-scss": "^14.0.0"
+  }
+}
