@@ -1,15 +1,17 @@
-@use "variables" as *;
+@use 'variables' as *;
+@use 'fonts';
 
 body {
-  font: 100% $font-stack;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1920px;
+  font-family:  $font-stack;
   background-color: #e5e5e5;
 }
 
-h2 {
-  font-size: 55px;
+h1 {
+  font-family: $font-title, sans-serif;
   font-weight: 400;
-  font-family: $font-title;
+  font-size: 55px;
 }
 
 h3 {
@@ -17,31 +19,27 @@ h3 {
 }
 
 h5 {
+  margin: 0 1px 0 0;
   font-family: $font-title;
   font-weight: 700;
+  font-size: 1.375rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  font-size: 1.375rem;
-  margin: 0 1px 0 0;
 }
 
 .organic-bread {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 900px;
+  color: $bgWhite;
+  font-size: 18px;
   text-align: center;
-  background-image: linear-gradient(
-      0deg,
-      rgb(0 0 0 / 45%),
-      rgb(0 0 0 / 45%)
-    ),
-    url("../images/Bakertheme.jpg");
+  background-image: linear-gradient(0deg, rgb(0 0 0 / 45%), rgb(0 0 0 / 45%)),
+    url('../images/Bakertheme.jpg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
-  color: $bgWhite;
-  font-size: 18px;
-  height: 900px;
 
   img {
     width: 140px;
@@ -49,47 +47,47 @@ h5 {
   }
 
   div {
-    margin-left: calc(50% - 500px);
     position: relative;
-    padding: 30px;
     width: 500px;
+    margin-left: calc(50% - 500px);
+    padding: 30px;
   }
 
   p {
-    line-height: 2;
-    font-size: 1.125rem;
-    text-shadow: 2px 2px 8px rgb(0 0 0 / 25%);
     margin: 20px 0 0;
+    font-size: 1.125rem;
+    line-height: 2;
+    text-shadow: 2px 2px 8px rgb(0 0 0 / 25%);
   }
 }
 
 .menu-but {
-  color: $bgWhite;
-  border: 2px solid $bgWhite;
-  background-color: transparent;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   margin: 30px auto 0;
+  border: 2px solid $bgWhite;
+  border-radius: 30px;
   padding: 20px 50px;
+  color: $bgWhite;
   font-weight: 700;
   font-size: 16px;
-  border-radius: 30px;
-  animation-duration: 3s;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: transparent;
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
+  animation-duration: 3s;
 
   &:hover {
-    background-color: $bgWhite;
     color: #000;
+    background-color: $bgWhite;
   }
 }
 
 .delicious-baking {
   .list {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(3, 35%);
-    position: relative;
     padding: 100px;
   }
 
@@ -99,8 +97,8 @@ h5 {
   }
 
   h5 {
-    font-size: 1.25rem;
     font-weight: 400;
+    font-size: 1.25rem;
   }
 
   p {
@@ -112,8 +110,8 @@ h5 {
   img {
     width: 65px;
     height: 65px;
-    margin-right: 30px;
     margin-top: 20px;
+    margin-right: 30px;
   }
 
   .list-item {
@@ -123,22 +121,22 @@ h5 {
 
 .our-mission {
   img {
-    height: 800px;
     width: 100%;
+    height: 800px;
     object-fit: cover;
     object-position: 50% 0%;
   }
 
   div {
     position: relative;
-    margin: -285px calc(((100% - 1140px) / 2)) 125px auto;
-    width: 551px;
-    background-color: $bgWhite;
-    box-shadow: 5px 5px 20px 0 rgb(0 0 0 / 20%);
-    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 551px;
+    margin: -285px calc(((100% - 1140px) / 2)) 125px auto;
+    padding: 30px;
+    box-shadow: 5px 5px 20px 0 rgb(0 0 0 / 20%);
+    background-color: $bgWhite;
 
     h3 {
       font-size: 2.5rem;
@@ -150,22 +148,22 @@ h5 {
     }
 
     button {
-      background-color: transparent;
-      text-transform: uppercase;
-      letter-spacing: 1px;
       margin: 30px auto 0 0;
+      border-radius: 30px;
       padding: 20px 50px;
       font-weight: 700;
       font-size: 16px;
-      border-radius: 30px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background-color: transparent;
       transition:
         background-color 0.3s ease,
         color 0.3s ease;
 
       &:hover,
       &:active {
-        background-color: black;
         color: white;
+        background-color: black;
       }
     }
   }
@@ -175,16 +173,16 @@ h5 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e5e5e5;
   margin-bottom: 30px;
+  background-color: #e5e5e5;
 
   .table {
-    background-color: $bgWhite;
-    padding: 30px 50px;
     width: 500px;
     height: auto;
-    padding-left: 30px;
+    padding: 30px 50px;
     padding-right: 30px;
+    padding-left: 30px;
+    background-color: $bgWhite;
   }
 
   h2 {
@@ -192,18 +190,18 @@ h5 {
   }
 
   p {
-    line-height: 2.2;
     margin: 20px auto 0 0;
+    line-height: 2.2;
   }
 
   .div1 {
     display: grid;
     grid-template-columns: repeat(2, calc(50% - 5px));
+    justify-content: center;
+    align-items: center;
     gap: 10px;
     min-height: 281px;
-    justify-content: center;
     text-align: center;
-    align-items: center;
   }
 
   .title {
@@ -211,40 +209,40 @@ h5 {
   }
 
   .div2 {
-    background-image: url('../images/Happy_man.jpg');
     width: 500px;
     height: 505px;
     padding: 30px;
-    background-size: cover;
+    background-image: url('../images/Happy_man.jpg');
     background-position: center;
+    background-size: cover;
   }
 
   a {
-    text-decoration: none;
     color: black;
-    font-weight: 400;
-    background-image: none;
-    font-size: 1.25em;
     font-family: inherit;
+    font-weight: 400;
+    font-size: 1.25em;
+    text-decoration: none;
+    background-image: none;
   }
 }
 
 .bakery-items {
   display: flex;
   flex-direction: column;
-  background-color: white;
   text-align: center;
+  background-color: white;
 
   h2 {
     line-height: 1.1;
   }
 
   .text {
+    width: 345px;
+    margin: 30px auto 0;
     font-size: 1.125rem;
     font-style: italic;
-    width: 345px;
     text-align: center;
-    margin: 30px auto 0;
   }
 
   img {
@@ -257,20 +255,20 @@ h5 {
   }
 
   p {
-    text-align: left;
     margin: 20px 0 0;
+    text-align: left;
   }
 
   .card {
-    padding: 50px 30px 30px;
     width: 240px;
+    padding: 50px 30px 30px;
   }
 }
 
 .contact-us {
-  background-image: url("../images/Contact_Us.jpg");
-  background-size: cover;
+  background-image: url('../images/Contact_Us.jpg');
   background-position: 50% 50%;
+  background-size: cover;
 
   .form {
     display: flex;
@@ -281,24 +279,24 @@ h5 {
     padding-left: 32px;
 
     a {
-      background-color: black;
-      color: white;
       border-radius: 50px;
+      padding: 15px;
+      color: white;
+      font-weight: 600;
       font-size: 1.125rem;
       letter-spacing: 2px;
-      font-weight: 600;
-      text-transform: uppercase;
       text-align: center;
       text-decoration: none;
-      padding: 15px;
+      text-transform: uppercase;
+      background-color: black;
       transition:
         background-color 0.3s ease,
         color 0.3s ease;
 
       &:hover,
       &:active {
-        background-color: $bgWhite;
         color: black;
+        background-color: $bgWhite;
       }
     }
 
@@ -307,14 +305,14 @@ h5 {
       margin-bottom: 32px;
 
       input {
-        border-radius: 50px;
+        height: 100%;
         border-width: 1px;
         border-style: solid;
         border-color: #e5e5e5;
-        height: 100%;
+        border-radius: 50px;
         padding: 10px 12px;
-        background-image: none;
         font: inherit;
+        background-image: none;
       }
     }
   }
@@ -325,9 +323,9 @@ h5 {
     gap: 20px;
 
     a {
+      margin: 22px 0 0;
       font-size: 1.125rem;
       line-height: 1.6;
-      margin: 22px 0 0;
     }
   }
 
@@ -346,8 +344,8 @@ h5 {
   }
 
   .organic-bread {
-    background-position: 70%;
     font-size: 15px;
+    background-position: 70%;
 
     img {
       width: 140px;
@@ -355,15 +353,15 @@ h5 {
     }
 
     div {
+      width: 340px;
       margin-left: 0;
       padding: 10px;
-      width: 340px;
     }
 
     p {
-      line-height: 2;
-      font-size: 1.125rem;
       margin: 20px 0 0;
+      font-size: 1.125rem;
+      line-height: 2;
     }
   }
 
@@ -385,8 +383,8 @@ h5 {
     }
 
     h5 {
-      font-size: 1.25rem;
       font-weight: 400;
+      font-size: 1.25rem;
     }
 
     p {
@@ -397,21 +395,21 @@ h5 {
     img {
       width: 65px;
       height: 65px;
-      margin-right: 30px;
       margin-top: 20px;
+      margin-right: 30px;
     }
   }
 
   .our-mission {
     img {
-      height: 800px;
       width: 100%;
+      height: 800px;
       object-position: 50% 0%;
     }
 
     div {
-      margin: 10px;
       width: auto;
+      margin: 10px;
       padding: 55px;
 
       p {
@@ -422,8 +420,8 @@ h5 {
   }
 
   .about-bakery {
-    margin-bottom: 30px;
     flex-direction: column;
+    margin-bottom: 30px;
 
     .table {
       width: calc(100% - 70px);
@@ -435,8 +433,8 @@ h5 {
     }
 
     p {
-      line-height: 2.2;
       margin: 20px auto 0 0;
+      line-height: 2.2;
     }
 
     .div1 {
@@ -461,15 +459,15 @@ h5 {
     }
 
     h5 {
+      margin: 20px 0 0;
+      font-weight: 700;
       font-size: 1.25rem;
       line-height: 1.2;
-      font-weight: 700;
-      margin: 20px 0 0;
     }
 
     .text {
-      font-size: 1.125rem;
       margin: 30px auto 0;
+      font-size: 1.125rem;
     }
 
     img {
@@ -481,14 +479,14 @@ h5 {
     }
 
     p {
-      text-align: left;
       margin: 20px 0 0;
+      text-align: left;
     }
 
     .card {
-      padding: 50px 30px 30px;
       width: 240px;
       margin-left: 50px;
+      padding: 50px 30px 30px;
     }
   }
 
@@ -499,10 +497,10 @@ h5 {
       padding: 0;
 
       a {
+        margin: 5px;
+        padding: 15px;
         font-size: 1rem;
         letter-spacing: 2px;
-        padding: 15px;
-        margin: 5px;
       }
 
       .email,
@@ -516,9 +514,9 @@ h5 {
     }
 
     a {
+      margin: 22px 0 0;
       font-size: 1.125rem;
       line-height: 1.6;
-      margin: 22px 0 0;
     }
   }
 
