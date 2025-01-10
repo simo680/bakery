@@ -1,5 +1,5 @@
 {
-  "name": "bakery",
+  "name": "bread-paradise",
   "version": "1.0.0",
   "description": "Website Layout: [link](https://nicepage.com/landing-page/preview/bagels-buns-rolls-biscuits-and-loaf-breads-4309158?device=desktop)",
   "main": "index.js",
@@ -25,6 +25,7 @@
     "browser-sync": "^3.0.3",
     "cssnano": "^7.0.6",
     "del": "^6.0.0",
+    "gh-pages": "^6.3.0",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.3.0",
     "gulp-concat-css": "^3.1.0",

@@ -3,14 +3,15 @@
 
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 body {
   max-width: 1920px;
   margin: 0 auto;
   font-family: $font-stack;
+  line-height: 1.6;
   background-color: $bg-color;
 }
 
@@ -30,6 +31,7 @@ h5 {
   font-weight: 700;
   font-size: 1.375rem;
   letter-spacing: 1px;
+
   text-transform: uppercase;
 }
 
@@ -94,12 +96,12 @@ h5 {
   background-color: $second-bg-color;
 
   &__block {
-    max-width: 1140px;
-    margin: 0 auto;
-    min-height: 740px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    max-width: 1140px;
+    min-height: 740px;
+    margin: 0 auto;
   }
 
   .list {
@@ -128,8 +130,8 @@ h5 {
   }
 
   &__description {
-    font-family: $font-text;
     margin: 20px auto 0 0;
+    font-family: $font-text;
     font-size: 16px;
     line-height: 1.6;
   }
@@ -141,31 +143,38 @@ h5 {
 }
 
 .our-mission {
-  background-color: $second-bg-color;;
+  position: relative;
+  padding-bottom: 200px;
   font-family: $font-title;
+  background-color: $second-bg-color;
 
   &__image {
     width: 100%;
-    height: 800px;
+    height: 803px;
+    margin-top: 0;
+    margin-bottom: 0;
     object-fit: cover;
     object-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   &__content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 551px;
-    margin: -285px calc(((100% - 1140px) / 2)) 125px auto;
-    padding: 30px;
+    position: absolute;
+    bottom: 5vh;
+    left: 50vw;
+    max-width: 551px;
     box-shadow: 5px 5px 20px 0 rgb(0 0 0 / 20%);
     background-color: $bgWhite;
   }
 
+  &__group {
+    padding: 30px;
+  }
+
   &__title {
-    font-weight: 400;
     font-family: $font-title;
+    font-weight: 400;
     font-size: 2.5rem;
   }
 
@@ -176,8 +185,8 @@ h5 {
 
   &__button {
     margin: 30px auto 0 0;
-    border-radius: 30px;
     border: 2px solid black;
+    border-radius: 30px;
     padding: 20px 50px;
     font-weight: 700;
     font-size: 16px;
@@ -191,21 +200,24 @@ h5 {
     &:hover,
     &:active {
       color: white;
-      cursor: pointer;
       background-color: black;
+      cursor: pointer;
     }
   }
 }
 
 .about-bakery {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-  background-color: #e5e5e5;
+  min-height: 609px;
+  background-color: #f2f2f2;
 
-  .table {
-    width: 500px;
+  &__content {
+    display: flex;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  &__table {
+    max-width: 500px;
     height: auto;
     padding: 30px 50px;
     padding-right: 30px;
@@ -213,33 +225,31 @@ h5 {
     background-color: $bgWhite;
   }
 
-  h2 {
+  &__title {
     margin: 0 auto 0 0;
   }
 
-  p {
+  &__text {
     margin: 20px auto 0 0;
     line-height: 2.2;
   }
 
-  .div1 {
+  &__links {
     display: grid;
     grid-template-columns: repeat(2, calc(50% - 5px));
     justify-content: center;
     align-items: center;
     gap: 10px;
     min-height: 281px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.2;
     text-align: center;
   }
 
-  .title {
-    padding: 10px 10px 10px 0;
-  }
-
-  .div2 {
-    width: 500px;
-    height: 505px;
-    padding: 30px;
+  &__image {
+    width: 100%;
+    height: 100%;
     background-image: url('../images/happy-man.jpg');
     background-position: center;
     background-size: cover;
@@ -258,38 +268,57 @@ h5 {
 .bakery-items {
   display: flex;
   flex-direction: column;
-  text-align: center;
   background-color: white;
 
-  h2 {
+  &__title {
+    margin: 60px auto 0;
     line-height: 1.1;
   }
 
-  .text {
-    width: 345px;
+  &__text {
+    max-width: 785px;
     margin: 30px auto 0;
     font-size: 1.125rem;
     font-style: italic;
     text-align: center;
   }
 
-  img {
-    height: 231px;
+  &__image {
+    width: 100%;
+    height: 292px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .table-list {
     display: grid;
-    grid-template-columns: repeat(3, 35%);
+    grid-template-columns: repeat(3, 33.3333%);
+    min-height: 796px;
+    margin: 30px auto 0;
+    grid-gap: 0px;
   }
 
-  p {
-    margin: 20px 0 0;
-    text-align: left;
-  }
-
-  .card {
-    width: 240px;
+  &__card {
+    max-width: 100%;
     padding: 50px 30px 30px;
+  }
+
+  &__card-title {
+    margin: 32px 0 0;
+    font-weight: 400;
+  }
+
+  &__card-description {
+    margin: 20px 0 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.6;
+  }
+
+  &__price {
+    margin: 20px 0 0;
+    font-weight: 700;
   }
 }
 
@@ -359,6 +388,24 @@ h5 {
 
   .call-us {
     padding: 10px 26px 10px 0;
+  }
+}
+
+.footer {
+  color: #ffffff;
+  background-color: #333333;
+
+  &__group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 99px;
+  }
+
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.6;
   }
 }
 

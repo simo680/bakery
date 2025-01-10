@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-const ghPages = require('gulp-gh-pages');
+const ghPages = require('gh-pages');
 const concat = require('gulp-concat-css');
 const plumber = require('gulp-plumber');
 const del = require('del');
@@ -19,14 +19,21 @@ function serve() {
   });
 }
 
-function deploy() {
-  return gulp.src('dist/**/*').pipe(ghPages());
+function deploy(done) {
+  ghPages.publish('./dist/', function (err) {
+    if (err) {
+      console.error('Deployment failed:', err);
+    } else {
+      console.log('Deployment successful!');
+    }
+    done();
+  });
 }
 
 function fonts() {
   return gulp
-    .src('src/fonts/**/*.{ttf,woff,woff2}') 
-    .pipe(gulp.dest('dist/fonts')); 
+    .src('src/fonts/**/*.{ttf,woff,woff2}')
+    .pipe(gulp.dest('dist/fonts'));
 }
 
 function html() {
