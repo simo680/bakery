@@ -24,7 +24,7 @@
 
 ![Скриншот главной страницы](./src/images/screenshot.png)
 
-[Посмотреть демо](https://yourusername.github.io/bread-paradise/)
+[Посмотреть демо](https://simo680.github.io/bread-paradise/)
 
 ### Системные требования
 
@@ -34,7 +34,7 @@
 
 1. Склонируйте репозиторий:
    ```sh
-   git clone https://github.com/yourusername/bread-paradise.git
+   git clone https://github.com/simo680/bread-paradise.git
    ```
 2. Перейдите в папку проекта:
    ```sh

@@ -18,7 +18,7 @@ body {
   margin: 0 auto;
   font-family: $font-default;
   line-height: 1.6;
-  background-color: $bg-color;
+  background-color: $bg-primary;
 
   @include responsive($tablet-size) {
     font-size: 16px;
@@ -32,7 +32,7 @@ body {
 }
 
 h2 {
-  font-family: $font-title, sans-serif;
+  font-family: $font-primary, sans-serif;
   font-weight: 400;
   font-size: 55px;
 
@@ -51,7 +51,7 @@ h3 {
 
 h5 {
   margin: 0 1px 0 0;
-  font-family: $font-title;
+  font-family: $font-primary;
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.2;
@@ -72,7 +72,7 @@ h5 {
   flex-direction: column;
   justify-content: center;
   height: 900px;
-  color: $bgWhite;
+  color: $text-light;
   font-size: 18px;
   text-align: center;
   background-image: linear-gradient(0deg, rgb(0 0 0 / 45%), rgb(0 0 0 / 45%)),
@@ -123,10 +123,10 @@ h5 {
 
 .menu-but {
   margin: 30px auto 0;
-  border: 2px solid $bg-color;
+  border: 2px solid $bg-primary;
   border-radius: 30px;
   padding: 20px 50px;
-  color: $bgWhite;
+  color: $text-light;
   font-weight: 700;
   font-size: 16px;
   letter-spacing: 1px;
@@ -138,14 +138,14 @@ h5 {
   animation-duration: 3s;
 
   &:hover {
-    color: #000;
-    background-color: $bgWhite;
+    color: $text-dark;
+    background-color: $bg-primary;
     cursor: pointer;
   }
 }
 
 .delicious-baking {
-  background-color: $second-bg-color;
+  background-color: $bg-secondary;
 
   &__block {
     display: flex;
@@ -199,7 +199,7 @@ h5 {
 
   &__description {
     margin: 20px auto 0 0;
-    font-family: $font-text;
+    font-family: $font-primary;
     font-size: 16px;
     line-height: 1.6;
   }
@@ -213,8 +213,8 @@ h5 {
 .our-mission {
   position: relative;
   padding-bottom: 200px;
-  font-family: $font-title;
-  background-color: $second-bg-color;
+  font-family: $font-primary;
+  background-color: $bg-secondary;
 
   &__image {
     width: 100%;
@@ -233,7 +233,7 @@ h5 {
     left: 50vw;
     max-width: 551px;
     box-shadow: 5px 5px 20px 0 rgb(0 0 0 / 20%);
-    background-color: $bgWhite;
+    background-color: $bg-primary;
 
     @include responsive($tablet-size) {
       left: 5vw;
@@ -251,7 +251,7 @@ h5 {
   }
 
   &__title {
-    font-family: $font-title;
+    font-family: $font-primary;
     font-weight: 400;
     font-size: 2.5rem;
   }
@@ -263,7 +263,7 @@ h5 {
 
   &__button {
     margin: 30px auto 0 0;
-    border: 2px solid black;
+    border: 2px solid $text-dark;
     border-radius: 30px;
     padding: 20px 50px;
     font-weight: 700;
@@ -277,8 +277,8 @@ h5 {
 
     &:hover,
     &:active {
-      color: white;
-      background-color: black;
+      color: $text-light;
+      background-color: $text-dark;
       cursor: pointer;
     }
   }
@@ -286,7 +286,7 @@ h5 {
 
 .about-bakery {
   min-height: 609px;
-  background-color: #f2f2f2;
+  background-color: $bg-secondary;
 
   &__content {
     display: flex;
@@ -308,7 +308,7 @@ h5 {
     width: 95%;
     height: auto;
     padding: 30px 50px;
-    background-color: $bgWhite;
+    background-color: $bg-primary;
 
     @include responsive($tablet-size) {
       width: 100%;
@@ -337,7 +337,7 @@ h5 {
     align-items: center;
     gap: 10px;
     min-height: 281px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: $font-secondary;
 
     @include responsive($mobile-size) {
       grid-template-columns: 1fr 1fr;
@@ -346,7 +346,7 @@ h5 {
   }
 
   &__link-item {
-    color: black;
+    color: $text-dark;
     text-decoration: none;
   }
 
@@ -361,7 +361,7 @@ h5 {
 .bakery-items {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: $bg-primary;
 
   &__title {
     margin: 60px auto 0;
@@ -410,7 +410,7 @@ h5 {
 
   &__card-description {
     margin: 20px 0 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: $font-secondary;
     font-size: 16px;
     font-style: italic;
     line-height: 1.6;
@@ -423,7 +423,7 @@ h5 {
 }
 
 .footer {
-  color: #ffffff;
+  color: $text-light;
   background-color: #333333;
 
   &__content {
@@ -442,23 +442,22 @@ h5 {
       flex-direction: column;
       text-align: center;
       gap: 15px;
-      
     }
   }
 
   &__text {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $font-secondary;
     font-size: 0.875rem;
     line-height: 1.6;
   }
 
   &__tel {
     text-underline-offset: 4px;
-    color: #ffffff;
+    color: $text-light;
   }
 
   &__address {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $font-secondary;
     font-size: 0.875rem;
     line-height: 1.6;
     font-style: normal;

@@ -14,5 +14,15 @@
 
 @include font-face('Montserrat', '../fonts/Montserrat-Regular', 400, 'normal');
 @include font-face('Montserrat', '../fonts/Montserrat-SemiBold', 700, 'bold');
-@include font-face('Open Sans', '../fonts/OpenSans_SemiCondensed-Regular', 400, 'normal');
-@include font-face('Open Sans', '../fonts/OpenSans_SemiCondensed-SemiBold', 700, 'bold');
+@include font-face(
+  'Open Sans',
+  '../fonts/OpenSans_SemiCondensed-Regular',
+  400,
+  'normal'
+);
+@include font-face(
+  'Open Sans',
+  '../fonts/OpenSans_SemiCondensed-SemiBold',
+  700,
+  'bold'
+);
