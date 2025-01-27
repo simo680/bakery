@@ -7,32 +7,64 @@
   padding: 0;
 }
 
+@mixin responsive($screen) {
+  @media screen and (max-width: $screen) {
+    @content;
+  }
+}
+
 body {
   max-width: 1920px;
   margin: 0 auto;
-  font-family: $font-stack;
+  font-family: $font-default;
   line-height: 1.6;
   background-color: $bg-color;
+
+  @include responsive($tablet-size) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  @include responsive($mobile-size) {
+    font-size: 14px;
+    line-height: 1.4;
+  }
 }
 
 h2 {
   font-family: $font-title, sans-serif;
   font-weight: 400;
   font-size: 55px;
+
+  @include responsive($tablet-size) {
+    font-size: 48px;
+  }
+
+  @include responsive($mobile-size) {
+    font-size: 36px;
+  }
 }
 
 h3 {
-  font-family: $font-stack;
+  font-family: $font-default;
 }
 
 h5 {
   margin: 0 1px 0 0;
   font-family: $font-title;
   font-weight: 700;
-  font-size: 1.375rem;
+  font-size: 1.25rem;
+  line-height: 1.2;
   letter-spacing: 1px;
-
   text-transform: uppercase;
+
+  @include responsive($tablet-size) {
+    font-size: 1.1rem;
+  }
+
+  @include responsive($mobile-size) {
+    font-size: 1rem;
+  }
 }
 
 .organic-bread {
@@ -49,19 +81,39 @@ h5 {
   background-position: 50% 50%;
   background-size: cover;
 
-  img {
+  @include responsive($tablet-size) {
+    height: auto;
+  }
+
+  @include responsive($mobile-size) {
+    height: auto;
+    padding: 20px;
+  }
+
+  &__logo {
     width: 140px;
     background: none;
   }
 
-  div {
+  &__block {
     position: relative;
     width: 500px;
     margin-left: calc(50% - 500px);
     padding: 30px;
+
+    @include responsive($tablet-size) {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    @include responsive($mobile-size) {
+      width: 100%;
+      margin-left: 0;
+      padding: 20px;
+    }
   }
 
-  p {
+  &__text {
     margin: 20px 0 0;
     font-size: 1.125rem;
     line-height: 2;
@@ -102,6 +154,18 @@ h5 {
     max-width: 1140px;
     min-height: 740px;
     margin: 0 auto;
+
+    @include responsive($tablet-size) {
+      max-width: 100%;
+      min-height: auto;
+      padding: 20px;
+    }
+
+    @include responsive($mobile-size) {
+      max-width: 100%;
+      min-height: auto;
+      padding: 20px;
+    }
   }
 
   .list {
@@ -109,6 +173,10 @@ h5 {
     grid-template-columns: repeat(3, calc(33.3333% - 13.3333px));
     min-height: 418px;
     grid-gap: 20px;
+
+    @include responsive($mobile-size) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   .list__item {
@@ -166,6 +234,16 @@ h5 {
     max-width: 551px;
     box-shadow: 5px 5px 20px 0 rgb(0 0 0 / 20%);
     background-color: $bgWhite;
+
+    @include responsive($tablet-size) {
+      left: 5vw;
+      max-width: 90%;
+    }
+
+    @include responsive($mobile-size) {
+      left: 5vw;
+      max-width: 90%;
+    }
   }
 
   &__group {
@@ -214,15 +292,33 @@ h5 {
     display: flex;
     max-width: 1140px;
     margin: 0 auto;
+
+    @include responsive($tablet-size) {
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    @include responsive($mobile-size) {
+      flex-direction: column;
+      padding: 20px;
+    }
   }
 
   &__table {
-    max-width: 500px;
+    width: 95%;
     height: auto;
     padding: 30px 50px;
-    padding-right: 30px;
-    padding-left: 30px;
     background-color: $bgWhite;
+
+    @include responsive($tablet-size) {
+      width: 100%;
+      padding: 20px;
+    }
+
+    @include responsive($mobile-size) {
+      width: 100%;
+      padding: 20px;
+    }
   }
 
   &__title {
@@ -242,26 +338,23 @@ h5 {
     gap: 10px;
     min-height: 281px;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.25rem;
-    line-height: 1.2;
-    text-align: center;
+
+    @include responsive($mobile-size) {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+  }
+
+  &__link-item {
+    color: black;
+    text-decoration: none;
   }
 
   &__image {
     width: 100%;
-    height: 100%;
     background-image: url('../images/happy-man.jpg');
     background-position: center;
     background-size: cover;
-  }
-
-  a {
-    color: black;
-    font-family: inherit;
-    font-weight: 400;
-    font-size: 1.25em;
-    text-decoration: none;
-    background-image: none;
   }
 }
 
@@ -296,6 +389,13 @@ h5 {
     min-height: 796px;
     margin: 30px auto 0;
     grid-gap: 0px;
+
+    @include responsive($tablet-size) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include responsive($mobile-size) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__card {
@@ -322,84 +422,28 @@ h5 {
   }
 }
 
-.contact-us {
-  background-image: url('../images/contact-us.jpg');
-  background-position: 50% 50%;
-  background-size: cover;
-
-  .form {
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-    margin-left: 900px;
-    padding: 30px 0;
-    padding-left: 32px;
-
-    a {
-      border-radius: 50px;
-      padding: 15px;
-      color: white;
-      font-weight: 600;
-      font-size: 1.125rem;
-      letter-spacing: 2px;
-      text-align: center;
-      text-decoration: none;
-      text-transform: uppercase;
-      background-color: black;
-      transition:
-        background-color 0.3s ease,
-        color 0.3s ease;
-
-      &:hover,
-      &:active {
-        color: black;
-        background-color: $bgWhite;
-      }
-    }
-
-    .email,
-    .name {
-      margin-bottom: 32px;
-
-      input {
-        height: 100%;
-        border-width: 1px;
-        border-style: solid;
-        border-color: #e5e5e5;
-        border-radius: 50px;
-        padding: 10px 12px;
-        font: inherit;
-        background-image: none;
-      }
-    }
-  }
-
-  .information {
-    display: grid;
-    grid-template-columns: repeat(3, calc(33.3333% - 13.3333px));
-    gap: 20px;
-
-    a {
-      margin: 22px 0 0;
-      font-size: 1.125rem;
-      line-height: 1.6;
-    }
-  }
-
-  .call-us {
-    padding: 10px 26px 10px 0;
-  }
-}
-
 .footer {
   color: #ffffff;
   background-color: #333333;
 
-  &__group {
+  &__content {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     min-height: 99px;
+    @include responsive($tablet-size) {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+      padding: 15px;
+    }
+
+    @include responsive($mobile-size) {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+      
+    }
   }
 
   &__text {
@@ -407,225 +451,16 @@ h5 {
     font-size: 0.875rem;
     line-height: 1.6;
   }
-}
 
-@media screen and (width >= 280px) and (width <= 576px) {
-  h2 {
-    font-size: 30px;
+  &__tel {
+    text-underline-offset: 4px;
+    color: #ffffff;
   }
 
-  h5 {
-    font-size: 1.3rem;
-  }
-
-  .organic-bread {
-    font-size: 15px;
-    background-position: 70%;
-
-    img {
-      width: 140px;
-      background: none;
-    }
-
-    div {
-      width: 340px;
-      margin-left: 0;
-      padding: 10px;
-    }
-
-    p {
-      margin: 20px 0 0;
-      font-size: 1.125rem;
-      line-height: 2;
-    }
-  }
-
-  .menu-but {
-    margin: 30px auto 0;
-    padding: 20px 50px;
-    font-size: 16px;
-  }
-
-  .delicious-baking {
-    .list {
-      grid-template-columns: repeat(1, 35%);
-      padding: 20px;
-    }
-
-    h2 {
-      display: flex;
-      justify-content: center;
-    }
-
-    h5 {
-      font-weight: 400;
-      font-size: 1.25rem;
-    }
-
-    p {
-      width: 230px;
-      font-size: 16px;
-    }
-
-    img {
-      width: 65px;
-      height: 65px;
-      margin-top: 20px;
-      margin-right: 30px;
-    }
-  }
-
-  .our-mission {
-    img {
-      width: 100%;
-      height: 800px;
-      object-position: 50% 0%;
-    }
-
-    div {
-      width: auto;
-      margin: 10px;
-      padding: 55px;
-
-      p {
-        margin-top: 20px 0 0;
-        line-height: 2;
-      }
-    }
-  }
-
-  .about-bakery {
-    flex-direction: column;
-    margin-bottom: 30px;
-
-    .table {
-      width: calc(100% - 70px);
-      height: auto;
-    }
-
-    h2 {
-      margin: 0 auto 0 0;
-    }
-
-    p {
-      margin: 20px auto 0 0;
-      line-height: 2.2;
-    }
-
-    .div1 {
-      grid-template-columns: repeat(1, calc(50% - 5px));
-    }
-
-    .div2 {
-      width: calc(100% - 60px);
-    }
-
-    a {
-      font-size: 1.25em;
-    }
-  }
-
-  .bakery-items {
-    h2 {
-      margin: 60px auto 0;
-      line-height: 1.1;
-    }
-
-    h5 {
-      margin: 20px 0 0;
-      font-weight: 700;
-      font-size: 1.25rem;
-      line-height: 1.2;
-    }
-
-    .text {
-      margin: 30px auto 0;
-      font-size: 1.125rem;
-    }
-
-    img {
-      height: 231px;
-    }
-
-    .table-list {
-      grid-template-columns: repeat(1, 35%);
-    }
-
-    p {
-      margin: 20px 0 0;
-      text-align: left;
-    }
-
-    .card {
-      width: 240px;
-      margin-left: 50px;
-      padding: 50px 30px 30px;
-    }
-  }
-
-  .contact-us {
-    .form {
-      width: 300px;
-      margin-left: 0;
-      padding: 0;
-
-      a {
-        margin: 5px;
-        padding: 15px;
-        font-size: 1rem;
-        letter-spacing: 2px;
-      }
-
-      .email,
-      .name {
-        margin-bottom: 32px;
-
-        input {
-          padding: 10px 12px;
-        }
-      }
-    }
-
-    a {
-      margin: 22px 0 0;
-      font-size: 1.125rem;
-      line-height: 1.6;
-    }
-  }
-
-  .call-us {
-    padding: 10px 26px 10px 0;
-  }
-}
-
-@media screen and (width >= 481px) and (width <= 1024px) {
-  .organic-bread {
-    align-items: center;
-  }
-
-  .our-mission {
-    div {
-      margin-right: 40px;
-    }
-  }
-
-  .delicious-baking {
-    .list {
-      grid-template-columns: repeat(2, 50%);
-      padding: 0;
-      font-size: 10px;
-    }
-  }
-
-  .bakery-items {
-    .table-list {
-      grid-template-columns: repeat(2, 60%);
-    }
-  }
-
-  .contact-us {
-    .form {
-      margin-left: 250px;
-    }
+  &__address {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    font-style: normal;
   }
 }
